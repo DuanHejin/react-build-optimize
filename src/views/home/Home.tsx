@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 
 export interface IHomeProps {}
 
@@ -12,12 +12,12 @@ export default class Home extends React.Component<IHomeProps, IHomeState> {
   }
 
   componentDidMount() {
-    let data = this.getData("a", "b", "c");
-    console.log("data :>> ", data);
+    let data = this.getData('a', 'b', 'c');
+    console.log('data :>> ', data);
   }
 
   getData = (a: string, b: string, c: string) => {
-    return { a, b, c, type: "data" };
+    return { a, b, c, type: 'data' };
   };
 
   public render() {
