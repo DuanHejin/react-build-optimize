@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { Button, DatePicker } from 'antd';
-import 'antd/dist/antd.css';
+// import { Button, DatePicker } from 'antd';
+// import 'antd/dist/antd.min.css';
 
 export interface IAntDesignDemoProps {}
 
@@ -17,8 +17,16 @@ export default class AntDesignDemo extends React.Component<IAntDesignDemoProps, 
     return (
       <div>
         <div>AntDesignDemo</div>
-        {/* <DatePicker></DatePicker> */}
-        <Button>Button</Button>
+        {/* <div>
+          <DatePicker></DatePicker>
+        </div>
+        <div>
+          <Button>Button</Button>
+
+          <Button type='primary' shape='circle'>
+            A
+          </Button>
+        </div> */}
       </div>
     );
   }

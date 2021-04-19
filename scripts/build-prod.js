@@ -27,6 +27,10 @@ webpackConfigProd.plugins.push(
   }),
 );
 
+// 增加lodash-webpack-plugin
+// const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
+// webpackConfigProd.plugins.push(new LodashModuleReplacementPlugin())
+
 // 加入speed-measure-webpack-plugin，查看打包时每个步骤消耗的时间
 const SpeedMeasurePlugin = require('speed-measure-webpack-plugin');
 const smp = new SpeedMeasurePlugin();
@@ -34,9 +38,9 @@ const smpConfig = smp.wrap(webpackConfigProd);
 
 // // Remove all content but keep the directory so that
 // // if you're in it, you don't end up in Trash
-// const fs = require('fs-extra');
-// const paths = require('react-scripts/config/paths');
-// fs.emptyDirSync(paths.appBuild);
+const fs = require('fs-extra');
+const paths = require('react-scripts/config/paths');
+fs.emptyDirSync(paths.appBuild);
 
 // actually running compilation and waiting for plugin to start explorer
 webpack(smpConfig, (err, stats) => {
