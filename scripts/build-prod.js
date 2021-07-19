@@ -10,8 +10,8 @@ const webpackConfigProd = require('react-scripts/config/webpack.config')('produc
 // this one is optional, just for better feedback on build
 const chalk = require('chalk');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
-const green = text => {
-  return chalk.green.bold(text);
+const green = (text) => {
+    return chalk.green.bold(text);
 };
 
 // pushing BundleAnalyzerPlugin to plugins array
@@ -22,9 +22,11 @@ webpackConfigProd.plugins.push(new BundleAnalyzerPlugin());
 // but during build time you will not see any messages for 10-60 seconds (depends on the size of the project)
 // and decide that compilation is kind of hang up on you; progress bar shows nice progression of webpack compilation
 webpackConfigProd.plugins.push(
-  new ProgressBarPlugin({
-    format: `${green('analyzing...')} ${green('[:bar]')}${green('[:percent]')}${green('[:elapsed seconds]')} - :msg`,
-  }),
+    new ProgressBarPlugin({
+        format: `${green('analyzing...')} ${green('[:bar]')}${green('[:percent]')}${green(
+            '[:elapsed seconds]',
+        )} - :msg`,
+    }),
 );
 
 // 增加lodash-webpack-plugin
@@ -44,7 +46,7 @@ fs.emptyDirSync(paths.appBuild);
 
 // actually running compilation and waiting for plugin to start explorer
 webpack(smpConfig, (err, stats) => {
-  if (err || stats.hasErrors()) {
-    console.error(err);
-  }
+    if (err || stats.hasErrors()) {
+        console.error(err);
+    }
 });

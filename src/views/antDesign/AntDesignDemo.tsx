@@ -7,17 +7,17 @@ export interface IAntDesignDemoProps {}
 export interface IAntDesignDemoState {}
 
 export default class AntDesignDemo extends React.Component<IAntDesignDemoProps, IAntDesignDemoState> {
-  constructor(props: IAntDesignDemoProps) {
-    super(props);
+    constructor(props: IAntDesignDemoProps) {
+        super(props);
 
-    this.state = {};
-  }
+        this.state = {};
+    }
 
-  public render() {
-    return (
-      <div>
-        <div>AntDesignDemo</div>
-        {/* <div>
+    public render() {
+        return (
+            <div>
+                <div>AntDesignDemo</div>
+                {/* <div>
           <DatePicker></DatePicker>
         </div>
         <div>
@@ -27,7 +27,7 @@ export default class AntDesignDemo extends React.Component<IAntDesignDemoProps, 
             A
           </Button>
         </div> */}
-      </div>
-    );
-  }
+            </div>
+        );
+    }
 }
