@@ -7,22 +7,12 @@
  */
 import React from 'react';
 import './App.css';
-// import LodashDemo from './views/lodash/LodashDemo';
-// import MomentDemo from './views/moment/MomentDemo';
-// import AntDesignDemo from './views/antDesign/AntDesignDemo';
-import HooksDemo1 from './views/hooksDemo/HooksDemo1';
-// import { AntDesignDemo, Home, LodashDemo, MomentDemo } from "./views";
+import Routes from './routes';
 
 function App() {
     return (
         <div className='App'>
-            {/* <Home></Home> */}
-            {/* <LodashDemo></LodashDemo>
-      <br />
-      <MomentDemo></MomentDemo>
-      <br />
-      <AntDesignDemo></AntDesignDemo> */}
-            <HooksDemo1></HooksDemo1>
+            <Routes></Routes>
         </div>
     );
 }

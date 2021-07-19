@@ -24,6 +24,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "dev-client": "node scripts/dev-client.js",
     "analyze": "source-map-explorer 'build/static/js/*.js'",
     "build-analyze": "node 'scripts/build-prod.js'",
     "build": "react-scripts build",
@@ -103,9 +104,9 @@
       ],
       "import/no-amd": 2,
       "import/no-dynamic-require": 2,
-      "import/no-commonjs": 2,
       "react/jsx-wrap-multilines": 2,
-      "react/jsx-closing-bracket-location": 2
+      "react/jsx-closing-bracket-location": 2,
+      "import/no-anonymous-default-export": 0
     }
   },
   "browserslist": {
@@ -122,8 +123,10 @@
   },
   "devDependencies": {
     "@types/lodash": "^4.14.168",
+    "@types/react-router-dom": "^5.1.8",
     "babel-plugin-import": "^1.13.3",
     "babel-plugin-lodash": "^3.3.4",
+    "babel-plugin-module-resolver": "^4.1.0",
     "eslint-plugin-prettier": "^3.4.0",
     "lodash-webpack-plugin": "^0.11.6",
     "patch-package": "^6.4.7",
