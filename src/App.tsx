@@ -5,16 +5,28 @@
  * @Date: 2021-05-20 14:53:52
  * @LastEditors: duanhejin
  */
-import React from 'react';
+import { Button, Layout } from 'antd';
+import { useHistory, useLocation, withRouter } from 'react-router-dom';
 import './App.css';
 import Routes from './routes';
 
 function App() {
+    const history = useHistory();
+    const { pathname } = useLocation();
+    const goBack = () => {
+        history.goBack();
+    };
+
     return (
-        <div className='App'>
+        <Layout className='App'>
             <Routes></Routes>
-        </div>
+            {pathname !== '/' && (
+                <Button className='btn-back-layout' type='primary' onClick={goBack}>
+                    返回
+                </Button>
+            )}
+        </Layout>
     );
 }
 
-export default App;
+export default withRouter(App);

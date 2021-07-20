@@ -27,7 +27,7 @@ const HooksDemo1 = (props: IHooksDemo1Props) => {
         } else {
             selectedKeys.push(targetKey);
         }
-        setSelectedKeys(selectedKeys);
+        setSelectedKeys([...selectedKeys]);
     };
 
     console.log('count :>> ', count);
